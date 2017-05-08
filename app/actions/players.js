@@ -4,3 +4,10 @@ export const addPlayer = (player) => {
         player
     }
 }
+
+export const deletePlayer = (player) => {
+    return {
+        type: 'DELETE_PLAYER',
+        player
+    }
+}

@@ -3,8 +3,16 @@ export var players = (state = [], action) => {
         case 'ADD_PLAYER': 
             return [
                 ...state,
-                action.player
+                {
+                    id: state.length,
+                    name: action.player.name,
+                    score: action.player.score
+                }
             ]
+        case 'DELETE_PLAYER':
+            return state.filter(player => {
+                return player.id !== action.player.id
+            })
         default:
             return state
     }

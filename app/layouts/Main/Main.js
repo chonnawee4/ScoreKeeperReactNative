@@ -2,10 +2,12 @@ import React from 'react'
 import { View, Text } from 'react-native'
 
 import InputBox from '../../components/InputBox'
+import { connect } from 'react-redux'
+import { addPlayer } from '../../actions/players'
 
 import styles from './styles'
 
-export default class Main extends React.Component {
+class Main extends React.Component {
 
     static navigationOptions = {
         title: 'Main',
@@ -13,7 +15,11 @@ export default class Main extends React.Component {
 
     _handleSubmit = (text) => {
         const { navigate } = this.props.navigation
-        navigate('Display', { text: text})
+        this.props.dispatch(addPlayer({
+            name: 'M',
+            score: 0
+        }))
+        // navigate('Display', { text: text})
     }
 
     render() {
@@ -24,3 +30,5 @@ export default class Main extends React.Component {
         )
     }
 }
+
+export default connect()(Main)
