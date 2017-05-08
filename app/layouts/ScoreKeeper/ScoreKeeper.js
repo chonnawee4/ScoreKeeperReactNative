@@ -28,7 +28,6 @@ class ScoreKeeper extends React.Component {
     }
 
     render() {
-        
         return (
             <View style={styles.container}>
                 <ScoreKeeperListView players={this.props.players}/>

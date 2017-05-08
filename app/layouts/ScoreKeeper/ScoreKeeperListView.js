@@ -21,7 +21,6 @@ export default class ScoreKeeperListView extends React.Component {
     }
     
     render() {
-        
         return (
              <ListView
                 style={styles.listView}
