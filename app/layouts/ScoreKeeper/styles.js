@@ -5,7 +5,8 @@ const styles = StyleSheet.create({
         flex: 1,
         marginTop: 20,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        alignContent: 'center'
     },
     addPlayerBox: {
         justifyContent: 'center',
@@ -16,6 +17,10 @@ const styles = StyleSheet.create({
     },
     button: {
         color: '#000'
+    },
+    listView: {
+        height: 400,
+        width: '90%'
     }
 }) 
 
