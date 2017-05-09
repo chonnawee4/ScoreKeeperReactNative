@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, TextInput, ListView, Text, Button } from 'react-native'
 import { connect } from 'react-redux'
-import { addPlayer } from '../../actions/players'
+import { addPlayer, deletePlayer } from '../../actions/players'
 import ScoreKeeperListView from './ScoreKeeperListView'
 
 import styles from './styles'
@@ -26,11 +26,11 @@ class ScoreKeeper extends React.Component {
             })
         }
     }
-
+    
     render() {
         return (
             <View style={styles.container}>
-                <ScoreKeeperListView players={this.props.players}/>
+                <ScoreKeeperListView players={this.props.players} listItemSelected={this.itemSelected}/>
                 <View style={styles.addPlayerBox}>
                     <TextInput
                         style={styles.textInput}

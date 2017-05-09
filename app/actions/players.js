@@ -11,3 +11,10 @@ export const deletePlayer = (player) => {
         player
     }
 }
+
+export const editPlayer = (player) => {
+    return {
+        type: 'EDIT_PLAYER',
+        player
+    }
+}

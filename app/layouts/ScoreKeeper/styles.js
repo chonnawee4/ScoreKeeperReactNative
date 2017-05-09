@@ -19,8 +19,14 @@ const styles = StyleSheet.create({
         color: '#000'
     },
     listView: {
-        height: 400,
+        height: 390,
         width: '90%'
+    },
+    groupBtn: {
+        flex: 1,
+        justifyContent: 'space-between',
+        flexDirection: 'row',
+        alignContent: 'center'
     }
 }) 
 
